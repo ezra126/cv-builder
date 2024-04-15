@@ -1,12 +1,18 @@
+"use client";
 import React, { useEffect, useRef } from "react";
 
 import "quill/dist/quill.snow.css";
 // import { ReactQuillProps, UnprivilegedEditor } from "react-quill";
 // import { DeltaStatic, Sources } from "quill";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
+import dynamic from "next/dynamic";
 
 const TextEditorForEmployement = ({ handleTextEditor, value }) => {
   const reactQuillRef = React.useRef();
+  const ReactQuill = useMemo(
+    () => dynamic(() => import("react-quill"), { ssr: false }),
+    []
+  );
 
   //    const updateResumeEducation = useResumeStore((state) => state.updateResumeEducation);
 

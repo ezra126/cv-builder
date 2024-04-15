@@ -1,15 +1,20 @@
-import React, { useEffect, useRef } from "react";
+"use client";
 
+import React, { useEffect, useRef, useMemo } from "react";
+// import ReactQuill from "react-quill";
 import "quill/dist/quill.snow.css";
+import dynamic from "next/dynamic";
 // import { ReactQuillProps, UnprivilegedEditor } from "react-quill";
 // import { DeltaStatic, Sources } from "quill";
 import { useResumeStore } from "@/app/store/resumeStore";
 
-import ReactQuill from "react-quill";
-
 const TextEditor = ({ handleTextEditor, value }) => {
   const reactQuillRef = React.useRef();
   const resumeObjective = useResumeStore((state) => state.ResumeObjective);
+  const ReactQuill = useMemo(
+    () => dynamic(() => import("react-quill"), { ssr: false }),
+    []
+  );
 
   var modules = {
     toolbar: [
