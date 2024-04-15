@@ -22,6 +22,19 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/store/ModalStore.ts",
+    "app/api/auth/[...nextauth]/route.js",
+    "app/api/auth/[...nextauth]/route.js",
+    "app/components/navbar.jsx",
+    "app/providers/SessionProvider.js",
+    "app/(resume-builder)/resume-builder/page.jsx",
+    "app/components/textEditor.jsx",
+    "app/(main)/account/page.jsx"
+  ],
   "exclude": ["node_modules"]
 }
