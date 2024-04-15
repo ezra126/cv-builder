@@ -10,6 +10,8 @@ import { MdEmail } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
 
 
+type Key = string | number;
+
 const TemplateThree = () => {
 
 
@@ -98,7 +100,7 @@ const TemplateThree = () => {
                             <div className="flex flex-col text-[9px] pt-1 gap-1 ">
                                 {
                                     resumeSkill.map((skill) => (
-                                        <div className='flex flex-row gap-1 items-center'><div><GoDotFill /></div> <div>{skill?.skill}</div></div>
+                                        <div key={skill.id as Key} className='flex flex-row gap-1 items-center'><div><GoDotFill /></div> <div>{skill?.skill}</div></div>
                                     ))
                                 }
                             </div>
@@ -125,7 +127,7 @@ const TemplateThree = () => {
                         <div>
                             {
                                 resumeEmployement.map((empHis) => (
-                                    <div className='flex flex-col pb-5'>
+                                    <div className='flex flex-col pb-5' key={empHis.id as Key}>
                                         <p className='text-sm'>{empHis.start_date} upto {empHis.start_date}</p>
                                         <p className='text-sm font-semibold'>{empHis.job_title}</p>
                                         <p className='text-sm'>{empHis.company}</p>
@@ -143,7 +145,7 @@ const TemplateThree = () => {
                         <div>
                             {
                                 resumeEducation.map((eduHis) => (
-                                    <div className='flex flex-col pb-5'>
+                                    <div className='flex flex-col pb-5' key={eduHis.id as Key}>
                                         <p className='text-sm'>{eduHis.start_date} upto {eduHis.start_date}</p>
                                         <p className='text-sm font-semibold'>{eduHis.degree} at {eduHis.school}</p>
                                         {/* <p className='text-sm'>{eduHis.}</p>

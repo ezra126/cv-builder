@@ -159,7 +159,7 @@ const LoginModal = () => {
                                             </div>
                                         </button>
                                     </div>
-                                    <div className='text-center font-light text-neutral-500'>don't have any account  <span
+                                    <div className='text-center font-light text-neutral-500'>don&apos;t have any account  <span
                                         onClick={() => {
                                             setLoginModal();
                                             setTimeout(() => {

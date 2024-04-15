@@ -124,6 +124,7 @@ const LanguageDraggableComponent = ({
                         {LanguageLevel.map((item) => (
                           <p
                             className="hover:bg-cyan-200 px-2 py-1"
+                            key={item.id}
                             // key={item}
                             onClick={() => {
                               setLevel(item);

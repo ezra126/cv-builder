@@ -732,21 +732,23 @@ const ResumeBuilderPage = () => {
                       //index
                       {
                         return (
-                          <EmploymentDraggableComponent
-                            id={id}
-                            JobTitle={job_title}
-                            Company={company}
-                            City={city}
-                            StartDate={start_date}
-                            EndDate={end_date}
-                            draggableId={id}
-                            Description={description}
-                            handleDelete={handleDelete}
-                            handleUpdateEmployementHistory={
-                              handleUpdateEmployementHistory
-                            }
-                            index={index}
-                          />
+                          <div key={id}>
+                            <EmploymentDraggableComponent
+                              id={id}
+                              JobTitle={job_title}
+                              Company={company}
+                              City={city}
+                              StartDate={start_date}
+                              EndDate={end_date}
+                              draggableId={id}
+                              Description={description}
+                              handleDelete={handleDelete}
+                              handleUpdateEmployementHistory={
+                                handleUpdateEmployementHistory
+                              }
+                              index={index}
+                            />
+                          </div>
                         );
                       }
                   )}
@@ -843,22 +845,24 @@ const ResumeBuilderPage = () => {
                         index
                       ) => {
                         return (
-                          <EducationDraggableComponent
-                            id={id}
-                            draggableId={id}
-                            index={index}
-                            School={school}
-                            Degree={degree}
-                            City={city}
-                            Description={description}
-                            StartDate={start_date}
-                            EndDate={end_date}
-                            handleDelete={handleDelete}
-                            handleUpdateEducationBackground={
-                              handleUpdateEducationBackground
-                            }
-                            // updateDisplay={updateDisplay}
-                          />
+                          <div key={id}>
+                            <EducationDraggableComponent
+                              id={id}
+                              draggableId={id}
+                              index={index}
+                              School={school}
+                              Degree={degree}
+                              City={city}
+                              Description={description}
+                              StartDate={start_date}
+                              EndDate={end_date}
+                              handleDelete={handleDelete}
+                              handleUpdateEducationBackground={
+                                handleUpdateEducationBackground
+                              }
+                              // updateDisplay={updateDisplay}
+                            />
+                          </div>
                         );
                       }
                     )}
@@ -928,13 +932,14 @@ const ResumeBuilderPage = () => {
               />
               <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
               <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-                Don't show experience level
+                Don&apos;t show experience level
               </span>
             </label>
 
             <div className="flex flex-wrap gap-4 ">
               {skillLists.map((item) => (
                 <div
+                  key={item}
                   onClick={() => {
                     selectSkill(item);
                   }}
@@ -955,17 +960,19 @@ const ResumeBuilderPage = () => {
                   >
                     {resumeSkill.map(({ id, skill, level }, index) => {
                       return (
-                        <SkillDraggableComponent
-                          id={id}
-                          draggableId={id}
-                          index={index}
-                          itemType={"Skills"}
-                          skill={skill}
-                          skillLevel={level}
-                          showExperienceLevel={displayExperienceLevel}
-                          handleDelete={handleDelete}
-                          updateSkill={handleUpdateSkills}
-                        />
+                        <div key={id}>
+                          <SkillDraggableComponent
+                            id={id}
+                            draggableId={id}
+                            index={index}
+                            itemType={"Skills"}
+                            skill={skill}
+                            skillLevel={level}
+                            showExperienceLevel={displayExperienceLevel}
+                            handleDelete={handleDelete}
+                            updateSkill={handleUpdateSkills}
+                          />
+                        </div>
                       );
                     })}
                     {provided.placeholder}
@@ -1050,17 +1057,19 @@ const ResumeBuilderPage = () => {
                   >
                     {resumeLink.map(({ id, label, link }, index) => {
                       return (
-                        <SocialLinkDraggableComponent
-                          id={id}
-                          draggableId={id}
-                          index={index}
-                          Label={label}
-                          Link={link}
-                          handleUpdateLinks={handleUpdateLinks}
-                          handleDelete={handleDelete}
-                          // display={display}
-                          //  updateDisplay={updateDisplay}
-                        />
+                        <div key={id}>
+                          <SocialLinkDraggableComponent
+                            id={id}
+                            draggableId={id}
+                            index={index}
+                            Label={label}
+                            Link={link}
+                            handleUpdateLinks={handleUpdateLinks}
+                            handleDelete={handleDelete}
+                            // display={display}
+                            //  updateDisplay={updateDisplay}
+                          />
+                        </div>
                       );
                     })}
                     {provided.placeholder}
@@ -1124,17 +1133,19 @@ const ResumeBuilderPage = () => {
                   >
                     {resumeLanguage.map(({ id, language, level }, index) => {
                       return (
-                        <LanguageDraggableComponent
-                          id={id}
-                          draggableId={id}
-                          index={index}
-                          Language={language}
-                          Level={level}
-                          handleUpdateLanguages={handleUpdateLanguages}
-                          handleDelete={handleDelete}
-                          // display={display}
-                          //  updateDisplay={updateDisplay}
-                        />
+                        <div key={id}>
+                          <LanguageDraggableComponent
+                            id={id}
+                            draggableId={id}
+                            index={index}
+                            Language={language}
+                            Level={level}
+                            handleUpdateLanguages={handleUpdateLanguages}
+                            handleDelete={handleDelete}
+                            // display={display}
+                            //  updateDisplay={updateDisplay}
+                          />
+                        </div>
                       );
                     })}
                     {provided.placeholder}

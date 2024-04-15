@@ -72,7 +72,7 @@ const Hero = () => {
                     <div className="line-clamp-5 w-2/3 bg-white sm:pt-9 pt-3 px-5">
                         <div className="font-semibold">Profile</div>
                         <p className="line-clamp-2 md:line-clamp-none text-sm h-full overflow-hidden">
-                            Diligent and even-tempered retail professional with 5 years of experience providing excellent customer service to technology enthusiasts. Highly responsive to customers' needs and always looking to find a solution to customer inquiries. A team player who goes the extra mile to ensure customers are satisfied.
+                            Diligent and even-tempered retail professional with 5 years of experience providing excellent customer service to technology enthusiasts. Highly responsive to customers needs and always looking to find a solution to customer inquiries. A team player who goes the extra mile to ensure customers are satisfied.
                         </p>
                     </div>
 

@@ -1,7 +1,7 @@
 import { useUserStore } from "@/app/store/UserStore";
 import { useResumeStore } from "@/app/store/resumeStore";
 
-function isResumeStoreNotEmpty() {
+function IsResumeStoreNotEmpty() {
   const resumeEducation = useResumeStore((state) => state.ResumeEducation);
   const resumeSkill = useResumeStore((state) => state.ResumeSkills);
   const resumeLink = useResumeStore((state) => state.ResumeLinks);
@@ -23,4 +23,4 @@ function isResumeStoreNotEmpty() {
   }
 }
 
-export default isResumeStoreNotEmpty;
+export default IsResumeStoreNotEmpty;

@@ -10,6 +10,7 @@ import prisma from "@/app/libs/prismadb";
 
 export const authOptions = {
   // adapter: PrismaAdapter(prisma),
+
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID,
@@ -32,7 +33,7 @@ export const authOptions = {
                 last_name: profile?.name,
                 email: profile?.email,
                 image: profile?.avatar_url,
-                password: "jjsk",
+                password: "******",
               },
             });
             return user;
@@ -81,7 +82,7 @@ export const authOptions = {
     }),
   ],
   callbacks: {
-    async signIn({ profile }) {
+    async signIn({}) {
       console.log("sign in achieved");
       return true;
       // try {
@@ -175,5 +176,8 @@ export const authOptions = {
 };
 
 const handler = NextAuth(authOptions);
+
+// export const GET = handler.handlers.GET;
+// export const POST = handler.handlers.POST;
 
 export { handler as GET, handler as POST };

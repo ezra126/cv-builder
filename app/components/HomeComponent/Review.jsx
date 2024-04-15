@@ -42,7 +42,7 @@ const Review = () => {
     <div className="flex flex-col w-full">
       <div className="flex  flex-row justify-between w-full px-4 py-5 gap-2 sm:gap-0">
         {itemsToDisplay.map((item, index) => (
-          <div id={index} className="sm:w-2/5 ">
+          <div id={index} className="sm:w-2/5 " key={index}>
             <div className="flex flex-row ">
               {/* <Rating
                 readonly
