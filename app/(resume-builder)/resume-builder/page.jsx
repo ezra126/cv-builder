@@ -706,7 +706,7 @@ const ResumeBuilderPage = () => {
           <div className="text-sm">
             how your relavant experience(last 10 years). Use bullet points to
             note your achievements.if possible - use numbers/facts(Achieved X
-            measured by Y.by doing Z)
+            measured by Y.by doing t)
           </div>
           <DragDropContext onDragEnd={handleOnDragEndForEmploymentHistory}>
             <Droppable droppableId="employmentHistory">

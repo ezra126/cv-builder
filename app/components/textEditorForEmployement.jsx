@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 
 import "quill/dist/quill.snow.css";
 // import { ReactQuillProps, UnprivilegedEditor } from "react-quill";
